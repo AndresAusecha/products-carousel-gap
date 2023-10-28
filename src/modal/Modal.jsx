@@ -11,19 +11,19 @@ export const Modal = ({ children, isOpen, modalId }) => {
   ref.current.setAttribute("id", modalId)
 
   if(!isOpen) {
-    if (modalRoot.contains(ref.current)) {
-      modalRoot.removeChild(ref.current);
+    if (modalRoot?.contains(ref.current)) {
+      modalRoot?.removeChild(ref.current);
     }
-    modalRoot.querySelectorAll(`#${modalId}`).forEach((node) => {
-      modalRoot.removeChild(node)
+    modalRoot?.querySelectorAll(`#${modalId}`).forEach((node) => {
+      modalRoot?.removeChild(node)
     })
-    document.getElementById("root").classList.remove("fixed-content");
+    document.getElementById("root")?.classList.remove("fixed-content");
     return null
   }
   
-  document.getElementById("root").classList.add("fixed-content");
-  if (!modalRoot.contains(ref.current)) {
-    modalRoot.appendChild(ref.current);
+  document.getElementById("root")?.classList.add("fixed-content");
+  if (!modalRoot?.contains(ref.current)) {
+    modalRoot?.appendChild(ref.current);
     return createPortal(
       children,
       ref.current

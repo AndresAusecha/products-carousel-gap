@@ -27,7 +27,7 @@ function App() {
       </Modal>
       <div className="App-description">
         <div className="App-description-container">
-          <p className="App-description-container-title">
+          <p data-testid="App-description-container-title" className="App-description-container-title">
             {product.name}
           </p>
           <p className="App-description-container-content">

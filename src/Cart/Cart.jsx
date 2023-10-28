@@ -11,7 +11,7 @@ export const Cart = () => {
         <button className="cart-tools-button" onClick={() => {
           setIsCartVisible((oldIsCartVisible) => !oldIsCartVisible)
         }}>
-          <img src="/assets/cart.png" alt="cart-button" srcset="" />
+          <img src="/assets/cart.png" alt="cart-button" />
           <div className="counter">
             <p>
               {cartProducts?.length || 0}
