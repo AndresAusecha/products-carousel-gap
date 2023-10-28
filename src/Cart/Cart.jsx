@@ -6,12 +6,17 @@ import { CartContext } from "./CartContext";
 export const Cart = () => {
   const { cartProducts, setIsCartVisible, isCartVisible } = useContext(CartContext)
   return (
-    <div className="cart">
-      <div className="cart-button">
-        <button onClick={() => {
+    <div className="cart" >
+      <div className="cart-tools">
+        <button className="cart-tools-button" onClick={() => {
           setIsCartVisible((oldIsCartVisible) => !oldIsCartVisible)
         }}>
           <img src="/assets/cart.png" alt="cart-button" srcset="" />
+          <div className="counter">
+            <p>
+              {cartProducts?.length || 0}
+            </p>
+          </div>
         </button>
       </div>
       <Modal isOpen={isCartVisible}>
@@ -26,7 +31,7 @@ export const Cart = () => {
             <div>
               {cartProducts.map((product) => (
                 <div>
-                  {product.name}
+                  {product.name} - {product.selectedVariant.color}
                 </div>
               ))}
             </div>

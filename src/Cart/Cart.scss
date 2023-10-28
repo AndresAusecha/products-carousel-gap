@@ -1,13 +1,31 @@
 .cart {
-  &-button {
+  .cart-tools {
     display: flex;
     justify-content: end;
-    button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      img {
-        width: 70px;
+    &-button {
+      display: flex;
+      justify-content: end;
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        img {
+          width: 100px;
+        }
+
+      .counter {
+        position: absolute;
+        margin-top: 20px;
+        margin-right: 20px;
+        background-color: #f0c054;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        p {
+          margin: 3px 0 0 0;
+        }
       }
     }
   }
@@ -33,6 +51,26 @@
           background-color: transparent;
           border: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .cart {
+    &-wrapper {
+      &-content {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .cart {
+    &-wrapper {
+      &-content {
+        width: 90%;
       }
     }
   }

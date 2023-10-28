@@ -29,10 +29,10 @@ const initialState = {
 export const CartContext = React.createContext(initialState);
 
 export const CartProvider = ({ children }) => {
-  const [selectedVariant, setSelectedVariant] = useState({});
+  const [selectedVariant, setSelectedVariant] = useState(variantsList[0]);
   const [cartProducts, setCartProducts] = useState([]);
   const [isCartVisible, setIsCartVisible] = useState(false);
-
+  console.log(selectedVariant);
   return (
     <CartContext.Provider value={{
       variantsList,
