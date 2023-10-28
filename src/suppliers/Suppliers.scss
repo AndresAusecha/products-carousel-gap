@@ -9,4 +9,9 @@
     border: 1px solid black;
     padding: 0.5rem;
   }
+  &-error-container {
+    p {
+      color: red;
+    }
+  }
 }
