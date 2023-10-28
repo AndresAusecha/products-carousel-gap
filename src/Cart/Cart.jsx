@@ -19,7 +19,7 @@ export const Cart = () => {
           </div>
         </button>
       </div>
-      <Modal isOpen={isCartVisible}>
+      <Modal isOpen={isCartVisible} modalId="cart-pop-up">
         <div className="cart-wrapper">
           <div className="cart-wrapper-content">
             <div className="cart-wrapper-content-close-button">

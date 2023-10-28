@@ -4,16 +4,17 @@ import "./Modal.scss";
 
 const modalRoot = document.getElementById('modal-root');
 
-export const Modal = ({ children, isOpen }) => {
+export const Modal = ({ children, isOpen, modalId }) => {
   const ref = useRef();
   ref.current = document.createElement('div');
   ref.current.classList.add('modal-content');
+  ref.current.setAttribute("id", modalId)
 
   if(!isOpen) {
     if (modalRoot.contains(ref.current)) {
       modalRoot.removeChild(ref.current);
     }
-    modalRoot.querySelectorAll(".modal-content").forEach((node) => {
+    modalRoot.querySelectorAll(`#${modalId}`).forEach((node) => {
       modalRoot.removeChild(node)
     })
     document.getElementById("root").classList.remove("fixed-content");
