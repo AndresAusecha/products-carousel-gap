@@ -6,10 +6,11 @@ export const Button = (props) => {
   const { 
     textContent,
     onClick,
-    active
+    active,
+    className
   } = props
   return (
-    <button className={cx("button", active ? "active" : "inactive")} onClick={onClick}>
+    <button className={cx("button", active ? "active" : "inactive", className)} onClick={onClick}>
       {textContent}
     </button>
   )

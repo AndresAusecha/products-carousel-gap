@@ -13,7 +13,7 @@ export const Carousel = (props) => {
     <div className="carousel">
       {productsList.map(({ image, color }, index) => (
         <div key={`image-container-${color}`} className={cx("carousel-item", index === activeProduct ? "active" : "inactive")} >
-          <img src={image} alt="" />
+          <img src={image} alt="" className="carousel-item-image" />
         </div>
       ))}
       <div className="carousel-activity-indicator-collection">

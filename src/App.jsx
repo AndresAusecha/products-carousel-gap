@@ -1,4 +1,5 @@
 import './App.scss';
+import { Button } from './button/Button';
 import { Carousel } from './carousel/Carousel';
 import { Suppliers } from './suppliers/Suppliers';
 
@@ -36,6 +37,9 @@ function App() {
         </div>
       </div>
       <Suppliers />
+      <div className="App-button-container">
+        <Button textContent="Add to cart" className="add-to-cart" />
+      </div>
     </div>
   );
 }

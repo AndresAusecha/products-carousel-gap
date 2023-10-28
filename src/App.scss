@@ -9,6 +9,10 @@
     align-items: center;
     &-container-title {
       font-weight: 700;
+      margin: 0;
+    }
+    &-container-content {
+      margin: 0;
     }
     &-container-price {
       p {
@@ -16,5 +20,26 @@
         font-size: xxx-large;
       }
     } 
+  }
+  &-button-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .add-to-cart {
+      width: 60%;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 360px) { 
+  .App {
+    &-button-container {
+      .add-to-cart {
+        width: 100%;
+      }
+    }
   }
 }
