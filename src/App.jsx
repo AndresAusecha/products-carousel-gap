@@ -1,44 +1,39 @@
+import { useContext } from 'react';
 import './App.scss';
 import { Button } from './button/Button';
 import { Carousel } from './carousel/Carousel';
 import { Suppliers } from './suppliers/Suppliers';
-
-const productsList = [
-  {
-    image: "/assets/hats/black.png",
-    color: "black"
-  }, {
-    image: "/assets/hats/blue.png",
-    color: "blue"
-  },
-  {
-    image: "/assets/hats/red.png",
-    color: "red"
-  }
-]
+import { CartContext } from './Cart/CartContext';
 
 function App() {
+  const { product, selectedVariant, setCartProducts } = useContext(CartContext)
+  
   return (
     <div className="App">
-      <Carousel productsList={productsList} />
+      <Carousel />
       <div className="App-description">
         <div className="App-description-container">
           <p className="App-description-container-title">
-            ABS Caps
+            {product.name}
           </p>
           <p className="App-description-container-content">
-            The classic design Bump Cap with ventilation ports is for maximum breathability
+            {product.description}
           </p>
           <div className="App-description-container-price">
             <p>
-              $20.00
+              ${product.price}
             </p>
           </div>
         </div>
       </div>
       <Suppliers />
       <div className="App-button-container">
-        <Button textContent="Add to cart" className="add-to-cart" />
+        <Button textContent="Add to cart" className="add-to-cart" onClick={() => {
+          setCartProducts((oldCardProducts) => [...oldCardProducts, {
+            ...product,
+            selectedVariant
+          }])
+        }} />
       </div>
     </div>
   );
