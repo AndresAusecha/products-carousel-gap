@@ -7,7 +7,7 @@ import { CartContext } from './Cart/CartContext';
 import { Cart } from './Cart/Cart';
 
 function App() {
-  const { product, selectedVariant, setCartProducts } = useContext(CartContext)
+  const { product, selectedSupplier, selectedVariant, setCartProducts } = useContext(CartContext)
   
   return (
     <div className="App">
@@ -33,7 +33,8 @@ function App() {
         <Button textContent="Add to cart" className="add-to-cart" onClick={() => {
           setCartProducts((oldCardProducts) => [...oldCardProducts, {
             ...product,
-            selectedVariant
+            selectedVariant,
+            selectedSupplier
           }])
         }} />
       </div>

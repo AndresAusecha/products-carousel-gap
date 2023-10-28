@@ -23,7 +23,9 @@ const initialState = {
   cartProducts: [],
   setCartProducts: () => {},
   isCartVisible: false,
-  setIsCartVisible: () => {}
+  setIsCartVisible: () => {},
+  selectedSupplier: {},
+  setSelectedSupplier: () => {},
 }
 
 export const CartContext = React.createContext(initialState);
@@ -32,7 +34,8 @@ export const CartProvider = ({ children }) => {
   const [selectedVariant, setSelectedVariant] = useState(variantsList[0]);
   const [cartProducts, setCartProducts] = useState([]);
   const [isCartVisible, setIsCartVisible] = useState(false);
-  console.log(selectedVariant);
+  const [selectedSupplier, setSelectedSupplier] = useState({});
+  
   return (
     <CartContext.Provider value={{
       variantsList,
@@ -46,7 +49,9 @@ export const CartProvider = ({ children }) => {
       cartProducts,
       setCartProducts,
       isCartVisible,
-      setIsCartVisible
+      setIsCartVisible,
+      selectedSupplier,
+      setSelectedSupplier
     }}>
       {children}
     </CartContext.Provider>

@@ -2,12 +2,16 @@
   display: flex;
   justify-content: center ;
   &-list {
+    height: 3rem;
+    font-size: large;
     &-label {
+      font-size: large;
       font-weight: 700;
     }
     background-color: white;
     border: 1px solid black;
     padding: 0.5rem;
+    cursor: pointer;
   }
   &-error-container {
     p {

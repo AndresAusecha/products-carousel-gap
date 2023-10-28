@@ -37,6 +37,9 @@ export const Cart = () => {
                   <p>
                     Price: {product.price}
                   </p>
+                  <p>
+                    Supplier: {product.selectedSupplier.name}
+                  </p>
                 </div>
               ))}
             </div>
