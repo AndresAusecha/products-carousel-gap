@@ -1,0 +1,16 @@
+.button {
+  padding: 0.75rem 1.5rem;
+  text-transform: capitalize;
+  border-radius: 0.85rem;
+  border: 2px solid black;
+  font-size: large;
+  cursor: pointer;
+  &.active {
+    background-color: black;
+    color: white;
+  }
+  &.inactive {
+    background-color: white;
+    color: black;
+  }
+}
