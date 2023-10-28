@@ -11,20 +11,20 @@ export const Carousel = (props) => {
   
   return (
     <div className="carousel">
-      {productsList.map(({ image }, index) => (
-        <div className={cx("carousel-item", index === activeProduct ? "active" : "inactive")} >
+      {productsList.map(({ image, color }, index) => (
+        <div key={`image-container-${color}`} className={cx("carousel-item", index === activeProduct ? "active" : "inactive")} >
           <img src={image} alt="" />
         </div>
       ))}
       <div className="carousel-activity-indicator-collection">
         {productsList.map((_, index) => (
-          <div className={cx("carousel-activity-indicator-collection-item", activeProduct === index && "active")} />
+          <div key={`product-list-el-${index}`} className={cx("carousel-activity-indicator-collection-item", activeProduct === index && "active")} />
         ))}
       </div>
       <hr className="carousel-line" />
       <div className="carousel-buttons">
         {productsList.map(({ color }, index) => (
-          <Button active={activeProduct === index} onClick={() => setActiveProduct(index)} textContent={color} />
+          <Button key={`button-${color}`} active={activeProduct === index} onClick={() => setActiveProduct(index)} textContent={color} />
         ))}
       </div>
     </div>

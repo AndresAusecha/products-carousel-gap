@@ -1,0 +1,9 @@
+.suppliers {
+  display: flex;
+  justify-content: center ;
+  &-list {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5rem;
+  }
+}
