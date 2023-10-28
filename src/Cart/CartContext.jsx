@@ -29,8 +29,6 @@ export const CartContext = React.createContext(initialState);
 export const CartProvider = ({ children }) => {
   const [selectedVariant, setSelectedVariant] = useState({});
   const [cartProducts, setCartProducts] = useState([]);
-  console.log(selectedVariant);
-  console.log(cartProducts);
 
   return (
     <CartContext.Provider value={{
@@ -42,7 +40,6 @@ export const CartProvider = ({ children }) => {
         description: "The classic design Bump Cap with ventilation ports is for maximum breathability",
         price: 20.00
       },
-      selectedProducts: [],
       cartProducts,
       setCartProducts
     }}>
