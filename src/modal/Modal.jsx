@@ -1,21 +1,33 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { createPortal } from "react-dom";
+import "./Modal.scss";
 
 const modalRoot = document.getElementById('modal-root');
 
 export const Modal = ({ children, isOpen }) => {
   const ref = useRef();
-  useEffect(() => {
-    ref.current = document.createElement('div');
-    modalRoot.appendChild(ref.current);
-  }, []);
+  ref.current = document.createElement('div');
+  ref.current.classList.add('modal-content');
 
   if(!isOpen) {
+    if (modalRoot.contains(ref.current)) {
+      modalRoot.removeChild(ref.current);
+    }
+    modalRoot.querySelectorAll(".modal-content").forEach((node) => {
+      modalRoot.removeChild(node)
+    })
+    document.getElementById("root").classList.remove("fixed-content");
     return null
   }
   
-  return createPortal(
-    children,
-    ref.current
-  )
+  document.getElementById("root").classList.add("fixed-content");
+  if (!modalRoot.contains(ref.current)) {
+    modalRoot.appendChild(ref.current);
+    return createPortal(
+      children,
+      ref.current
+    )
+  }
+
+  return null;
 }

@@ -4,12 +4,14 @@ import { Button } from './button/Button';
 import { Carousel } from './carousel/Carousel';
 import { Suppliers } from './suppliers/Suppliers';
 import { CartContext } from './Cart/CartContext';
+import { Cart } from './Cart/Cart';
 
 function App() {
   const { product, selectedVariant, setCartProducts } = useContext(CartContext)
   
   return (
     <div className="App">
+      <Cart />
       <Carousel />
       <div className="App-description">
         <div className="App-description-container">
