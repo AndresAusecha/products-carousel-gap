@@ -52,6 +52,16 @@
           border: none;
         }
       }
+      &-list {
+        width: 100%;
+        padding: 1rem 0;
+        &-item {
+          width: 100%;
+          border: 1px solid black;
+          padding: 0 1rem;
+          margin: 0 1rem 1rem 1rem;
+        }
+      }
     }
   }
 }

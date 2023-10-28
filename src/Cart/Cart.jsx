@@ -28,10 +28,15 @@ export const Cart = () => {
             <h1>
               Products
             </h1>
-            <div>
+            <div className="cart-wrapper-content-list">
               {cartProducts.map((product) => (
-                <div>
-                  {product.name} - {product.selectedVariant.color}
+                <div className="cart-wrapper-content-list-item">
+                  <p>
+                    Product: {product.name} - {product.selectedVariant.color}
+                  </p>
+                  <p>
+                    Price: {product.price}
+                  </p>
                 </div>
               ))}
             </div>
