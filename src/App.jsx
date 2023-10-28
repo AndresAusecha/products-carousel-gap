@@ -19,7 +19,22 @@ const productsList = [
 function App() {
   return (
     <div className="App">
-      <Carousel productsList={productsList} />  
+      <Carousel productsList={productsList} />
+      <div className="App-description">
+        <div className="App-description-container">
+          <p className="App-description-container-title">
+            ABS Caps
+          </p>
+          <p className="App-description-container-content">
+            The classic design Bump Cap with ventilation ports is for maximum breathability
+          </p>
+          <div className="App-description-container-price">
+            <p>
+              $20.00
+            </p>
+          </div>
+        </div>
+      </div>
       <Suppliers />
     </div>
   );

@@ -2,4 +2,19 @@
   border: 1px solid black;
   padding: 1rem;
   margin: 5%;
+  &-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-container-title {
+      font-weight: 700;
+    }
+    &-container-price {
+      p {
+        margin: 0;
+        font-size: xxx-large;
+      }
+    } 
+  }
 }

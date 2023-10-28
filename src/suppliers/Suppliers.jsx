@@ -11,8 +11,9 @@ export const Suppliers = () => {
   
   return (
     <div className="suppliers">
-      <label htmlFor="supplier-dropdown">
+      <label htmlFor="supplier-dropdown" className="suppliers-list-label">
         Supplier:
+        {' '}
       {suppliers && <select className="suppliers-list" name="supplier-dropdown">
         {suppliers.map((supplier) => <option key={`supplier-${supplier.id}`} className="suppliers-list-item">
           {supplier.name}

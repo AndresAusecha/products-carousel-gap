@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center ;
   &-list {
+    &-label {
+      font-weight: 700;
+    }
     background-color: white;
     border: 1px solid black;
     padding: 0.5rem;
