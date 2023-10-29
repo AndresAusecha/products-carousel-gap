@@ -8,3 +8,6 @@ To make this app run you first need to run `npm install`, in the root of the pro
 ## Run the tests
 There is a basic tests suite that can be used to assure the presence of the fundamental elements, they can be run with the next command: `npm run test`
 
+## Remote url
+In the next URL the application can be tested without a local install:
+`https://main--dashing-druid-6ea186.netlify.app/`
