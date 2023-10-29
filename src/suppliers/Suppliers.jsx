@@ -12,6 +12,7 @@ export const Suppliers = () => {
     setIsLoading(true)
     fetch("https://gorest.co.in/public/v2/users")
       .then((data) => data.json())
+      .then((suppliersList) => suppliersList.filter((supplier) => supplier.status === "active"))
       .then((suppliersList) => {
         setSuppliers(suppliersList)
         setSelectedSupplier(suppliersList[0])
