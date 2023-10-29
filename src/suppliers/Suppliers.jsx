@@ -22,7 +22,7 @@ export const Suppliers = () => {
       .finally(() => {
         setIsLoading(false)
       })
-  }, [])
+  }, [setSelectedSupplier])
 
   return (
     <div className="suppliers">
