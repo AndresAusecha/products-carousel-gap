@@ -32,7 +32,7 @@ export const Cart = () => {
               {cartProducts.map((product) => (
                 <div className="cart-wrapper-content-list-item">
                   <p>
-                    Product: {product.name} - {product.selectedVariant.color}
+                    Product: {product.title} - {product.selectedVariant.color}
                   </p>
                   <p>
                     Price: {product.price}

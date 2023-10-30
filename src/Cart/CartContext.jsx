@@ -42,9 +42,16 @@ export const CartProvider = ({ children }) => {
       selectedVariant,
       setSelectedVariant,
       product: {
-        name: "ABS Caps",
+        id: 32144,
+        title: "ABS Caps",
         description: "The classic design Bump Cap with ventilation ports is for maximum breathability",
-        price: 20.00
+        price: 20.00,
+        rate: 3.5,
+        colors: [
+          "black",
+          "blue",
+          "red"
+        ]
       },
       cartProducts,
       setCartProducts,

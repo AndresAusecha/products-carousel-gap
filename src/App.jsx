@@ -28,7 +28,7 @@ function App() {
       <div className="App-description">
         <div className="App-description-container">
           <p data-testid="App-description-container-title" className="App-description-container-title">
-            {product.name}
+            {product.title}
           </p>
           <p className="App-description-container-content">
             {product.description}
