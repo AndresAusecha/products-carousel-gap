@@ -16,8 +16,8 @@ export const Modal = ({ children, isOpen, modalId }) => {
     }
     modalRoot?.querySelectorAll(`#${modalId}`).forEach((node) => {
       modalRoot?.removeChild(node)
+      document.getElementById("root")?.classList.remove("fixed-content");
     })
-    document.getElementById("root")?.classList.remove("fixed-content");
     return null
   }
   
