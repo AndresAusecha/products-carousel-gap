@@ -29,8 +29,8 @@ export const Cart = () => {
               Products
             </h1>
             <div className="cart-wrapper-content-list">
-              {cartProducts.map((product) => (
-                <div className="cart-wrapper-content-list-item">
+              {cartProducts.map((product, index) => (
+                <div key={`${product.id}-${index}`} className="cart-wrapper-content-list-item">
                   <p>
                     Product: {product.title} - {product.selectedVariant.color}
                   </p>

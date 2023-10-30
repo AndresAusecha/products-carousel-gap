@@ -36,14 +36,13 @@ export const Suppliers = () => {
           : (
             <label htmlFor="supplier-dropdown" className="suppliers-list-label">
               Supplier: {' '}
-              <select className="suppliers-list" name="supplier-dropdown">
+              <select className="suppliers-list" name="supplier-dropdown" onChange={(e) => {
+                setSelectedSupplier(suppliers.find((supplier) => supplier.name === e.target.value))
+              }}>
                 {suppliers.map((supplier) => (
                   <option 
                     key={`supplier-${supplier.id}`} 
                     className="suppliers-list-item"
-                    onClick={() => {
-                      setSelectedSupplier(supplier)
-                    }}
                   >
                     {supplier.name}
                   </option>
