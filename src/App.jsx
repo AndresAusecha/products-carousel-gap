@@ -35,7 +35,7 @@ function App() {
           </p>
           <div className="App-description-container-price">
             <p>
-              ${product.price}
+              ${product.price?.toFixed(2)}
             </p>
           </div>
         </div>
